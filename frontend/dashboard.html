@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>LinkBoard - Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="navbar">
+    <h2>🔗 LinkBoard</h2>
+    <button class="logout-btn" onclick="logout()">Logout</button>
+  </div>
+
+  <div class="dashboard-container">
+    <div class="add-collection">
+      <input type="text" id="newCollectionName" placeholder="New collection name (e.g. JavaScript)">
+      <button onclick="addCollection()">+ Add Collection</button>
+    </div>
+
+    <div class="collections-grid" id="collectionsGrid"></div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>loadCollections();</script>
+</body>
+</html>

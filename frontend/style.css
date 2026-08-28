@@ -1,0 +1,284 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1e1e2f, #2d2d44);
+    min-height: 100vh;
+    color: #fff;
+}
+
+/* AUTH PAGE */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.auth-box {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 16px;
+    width: 350px;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.auth-box h1 {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #aaa;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.tabs {
+    display: flex;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.08);
+    border: none;
+    color: #ccc;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.tab-btn.active {
+    background: #6c5ce7;
+    color: #fff;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    outline: none;
+}
+
+input::placeholder {
+    color: #999;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background: #6c5ce7;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button[type="submit"]:hover {
+    background: #5849c4;
+    transform: translateY(-2px);
+}
+
+.error {
+    color: #ff6b6b;
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+/* DASHBOARD */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.navbar h2 {
+    font-size: 22px;
+}
+
+.logout-btn {
+    background: #ff6b6b;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.dashboard-container {
+    padding: 30px 40px;
+}
+
+.add-collection {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.add-collection input {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+.add-collection button {
+    padding: 12px 20px;
+    background: #6c5ce7;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.collections-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.collection-card {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative;
+}
+
+.collection-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.collection-card h3 {
+    margin-bottom: 8px;
+}
+
+.collection-card p {
+    color: #aaa;
+    font-size: 13px;
+}
+
+.card-actions {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 6px;
+}
+
+.card-actions button {
+    background: rgba(0, 0, 0, 0.3);
+    border: none;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+/* LINKS PAGE */
+.links-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.links-header input {
+    width: 250px;
+    margin-bottom: 0;
+}
+
+.back-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: #fff;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.add-link-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr auto;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.add-link-form input {
+    margin-bottom: 0;
+}
+
+.add-link-form button {
+    background: #6c5ce7;
+    border: none;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 0 20px;
+}
+
+.link-card {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 16px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.link-info h4 {
+    margin-bottom: 4px;
+}
+
+.link-info p {
+    color: #aaa;
+    font-size: 13px;
+}
+
+.link-actions button {
+    margin-left: 6px;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.open-btn {
+    background: #00b894;
+}
+
+.edit-btn {
+    background: #0984e3;
+}
+
+.delete-btn {
+    background: #ff6b6b;
+}

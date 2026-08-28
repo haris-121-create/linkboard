@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>LinkBoard - Collection</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="navbar">
+    <h2 id="collectionTitle">🔗 Collection</h2>
+    <button class="logout-btn" onclick="logout()">Logout</button>
+  </div>
+
+  <div class="dashboard-container">
+    <div class="links-header">
+      <button class="back-btn" onclick="window.location.href='dashboard.html'">← Back to Dashboard</button>
+      <input type="text" id="searchInput" placeholder="Search links..." oninput="loadLinks(this.value)">
+    </div>
+
+    <div class="add-link-form">
+      <input type="text" id="linkTitle" placeholder="Title">
+      <input type="text" id="linkUrl" placeholder="URL (https://...)">
+      <input type="text" id="linkDesc" placeholder="Description (optional)">
+      <button onclick="addLink()">+ Add Link</button>
+    </div>
+
+    <div id="linksList"></div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const name = params.get('name');
+    if (name) document.getElementById('collectionTitle').textContent = '🔗 ' + decodeURIComponent(name);
+    loadLinks();
+  </script>
+</body>
+</html>
