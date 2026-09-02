@@ -102,11 +102,12 @@ async function loadCollections() {
     card.className = 'collection-card';
     card.innerHTML =
       '<div class="card-actions">' +
-        '<button onclick="event.stopPropagation(); editCollection(\'' + col._id + '\', \'' + col.name + '\')">Edit</button>' +
-        '<button onclick="event.stopPropagation(); deleteCollection(\'' + col._id + '\')">Delete</button>' +
+        '<button class="edit-btn" onclick="event.stopPropagation(); editCollection(\'' + col._id + '\', \'' + col.name + '\')">✏️</button>' +
+        '<button class="delete-btn" onclick="event.stopPropagation(); deleteCollection(\'' + col._id + '\')">🗑️</button>' +
       '</div>' +
+      '<div class="card-icon">📁</div>' +
       '<h3>' + col.name + '</h3>' +
-      '<p>' + (col.description || 'No description') + '</p>';
+      '<p>' + (col.description || 'Click to explore links →') + '</p>';
     card.onclick = function() {
       window.location.href = 'collection.html?id=' + col._id + '&name=' + encodeURIComponent(col.name);
     };
