@@ -1,4 +1,4 @@
-const API = 'http://linkboard-backend-in1x.onrender.com/api';
+const API = 'http://localhost:5000/api';
 
 // ---------- AUTH PAGE LOGIC ----------
 function showLogin() {

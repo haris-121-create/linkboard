@@ -946,6 +946,3 @@ button[type="submit"]:hover {
   font-weight: 700;
   color: var(--text-light);
 }
-git add README.md
-git commit -m "Resolve README merge conflict"
-git push origin main
